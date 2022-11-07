@@ -5,7 +5,7 @@ CONTAINER = "tenno-hai-ssh"
 NAME=""
 
 sh:
-	$(D) exec -it $(CONTAINER) bash && $(D) cp ./tmp/test.py $(CONTAINER):./tmp/test.py
+	$(D) exec -it $(CONTAINER) bash
 up:
 	$(DC) up -d
 # # docker cp /tmp/local_file.php container_test1:/tmp/local_copy_file.php
