@@ -1,17 +1,19 @@
 version: "3"
 services:
   ubuntu:
-    image: ubuntu
+    # image: ubuntu
     # 適宜変えること
     container_name: "tenno-hai-ssh"
+    build:
+      context: .
+      dockerfile: Dockerfile
     tty: true
+    # 適宜変えること
+    command: /sbin/init
+    privileged: true
     # 適宜変えること
     ports:
       - "127.0.0.1:22222:22"
-    privileged: true
-    # command: /sbin/init
-    # 適宜変えること
     volumes:
       - "./etc/ssh:/etc/ssh"
-      - "./first.sh:/first.sh"
       - "./tmp/test.py:/tmp/test.py"
