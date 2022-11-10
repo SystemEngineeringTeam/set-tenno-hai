@@ -26,7 +26,6 @@
 - [About The Project](#about-the-project)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-    - [Docker Desktopの代替](#docker-desktopの代替)
   - [Installation](#installation)
 - [Usage](#usage)
 - [Roadmap](#roadmap)
@@ -56,9 +55,9 @@
   - Zsh
   - Powershell
 
-Windowsを利用される場合は、WSL2 or HyperVの環境が必要になります。
+(Windowsを利用される場合は、WSL2 or Hyper-Vの環境が必要になります。)
 
-#### Docker Desktopの代替
+---
 
 Docker Desktop以外にもDockerの実行環境があれば利用可能です。
 
