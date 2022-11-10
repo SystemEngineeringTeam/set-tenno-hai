@@ -1,18 +1,43 @@
 import os
+import subprocess
 
-path1 = "~/.ssh/authorized_keys"
+flag = True
+
+path1 = "/root/.ssh/authorized_keys"
 path2 = "/etc/ssh/sshd_config"
 if os.path.isfile(path1):
-    print("OK")
+    f = open(path1, "r")
+    contexts = f.read()
+    if contexts.find("ssh-rsa") != -1:
+        pass
+    else:
+        flag = False
 else:
-    print("NO")
+    flag = False
+
+
+res = subprocess.call('systemctl restart sshd', shell=True)
+if res == 0:
+    pass
+else:
+    flag == False
+
+# print(os.access(path1, os.R_OK))
+# print(os.access(path1, os.W_OK))
+# print(os.access(path1, os.X_OK))
 
 if os.path.isfile(path2):
-    print("OK")
     f = open(path2, "r")
     contexts = f.read()
     if "PasswordAuthentication no" in contexts:
-        print("OK")
+        pass
+    else:
+        flag = False
     f.close()
 else:
-    print("NO")
+    flag = False
+
+if flag:
+    print("ok")
+else:
+    print("error")
