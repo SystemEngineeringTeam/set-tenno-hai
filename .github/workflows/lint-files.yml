@@ -1,3 +1,4 @@
+---
 name: Lint Files
 on:
   push:
