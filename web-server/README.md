@@ -28,3 +28,6 @@ A くんは HTML で自分のホームページを作成しました．しかし
 - apache がインストールされているか？
 - 設定ファイルは適切に記述されているか？
 - アクセスしたときに表示されるファイルは変更されているか？
+
+## ヒント
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-ja
