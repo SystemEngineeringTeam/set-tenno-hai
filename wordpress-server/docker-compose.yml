@@ -1,0 +1,18 @@
+version: "3"
+services:
+  ubuntu:
+    # image: ubuntu
+    # 適宜変えること
+    container_name: "tenno-hai-wordpress"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    # 適宜変えること
+    command: /sbin/init
+    privileged: true
+    # 適宜変えること
+    ports:
+      - "127.0.0.1:8080:80"
+    environment:
+      TZ: Asia/Tokyo
