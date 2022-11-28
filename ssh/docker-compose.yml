@@ -16,4 +16,3 @@ services:
       - "127.0.0.1:22222:22"
     volumes:
       - "./ubuntu/etc/ssh:/etc/ssh"
-      - "./tmp/test.py:/tmp/test.py"
